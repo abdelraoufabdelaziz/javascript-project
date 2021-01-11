@@ -1,0 +1,210 @@
+/* this div for body of menu with background */
+
+body {
+    /* height: 500px; */
+    /* width: 800px; */
+    /* margin-left: 300px; */
+    background-image: url("4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    /* background-size: 700px 700px; */
+    /* margin-top: 50px; */
+}
+
+
+/* id play for play button */
+
+#play {
+    /*to put button on the center of the photo*/
+    position: absolute;
+    top: 250px;
+    left: 45%;
+    /* transform: translate(-50%, -50%); */
+    /* -ms-transform: translate(-50%, -50%); */
+    background-color: #079fce;
+    color: white;
+    font-size: 28px;
+    /* padding: 12px 24px; */
+    border: none;
+    /* cursor: pointer; */
+    width: 100px;
+    height: 100px;
+    border-radius: 70px;
+    /* text-align: center; */
+    text-align: center;
+    font-family: cursive;
+    border: none;
+    animation: movebtn 3s linear infinite;
+    outline: none;
+}
+
+@keyframes movebtn {
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+
+/* #play img {
+    width: 40px;
+    display: block;
+    height: 50px;
+} */
+
+#play:hover {
+    background-color: rgb(119, 204, 243);
+}
+
+
+/* #play:active {
+    position: relative;
+    top: 1px;
+} */
+
+#htoplay {
+    /*to put button on the center of the photo*/
+    position: absolute;
+    top: 400px;
+    left: 42%;
+    /* transform: translate(-50%, -50%); */
+    /* -ms-transform: translate(-50%, -50%); */
+    background-color: #079fce;
+    color: white;
+    font-size: 28px;
+    /* padding: 12px 24px; */
+    border: none;
+    /* cursor: pointer; */
+    width: 200px;
+    height: 70px;
+    border-radius: 30px;
+    /* text-align: center; */
+    text-align: center;
+    font-family: cursive;
+    animation: mv 2s linear infinite;
+    outline: none;
+}
+
+@keyframes mv {
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+#htoplay:hover {
+    background-color: rgb(119, 204, 243);
+}
+
+
+/* #htoplay:active {
+    position: fixed;
+    top: 1px;
+} */
+
+#about {
+    /*to put button on the center of the photo*/
+    position: absolute;
+    top: 500px;
+    left: 42%;
+    /* transform: translate(-50%, -50%); */
+    /* -ms-transform: translate(-50%, -50%); */
+    background-color: #079fce;
+    color: white;
+    font-size: 28px;
+    /* padding: 12px 24px; */
+    border: none;
+    /* cursor: pointer; */
+    width: 200px;
+    height: 70px;
+    border-radius: 30px;
+    /* text-align: center; */
+    text-align: center;
+    font-family: cursive;
+    animation: mov 3s linear infinite;
+    outline: none;
+}
+
+@keyframes mov {
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+about:only-child {
+    animation-delay: 3s;
+}
+
+#about:hover {
+    background-color: rgb(119, 204, 243);
+}
+
+
+/* #about:active {
+    position: unset;
+    top: 1px;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-box {
+    font-size: 80px;
+    font-family: cursive;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    font-weight: bolder;
+    text-align: center;
+    animation: mover 3s linear infinite;
+    color: rgba(4, 130, 168, 0.986);
+}
+
+@keyframes mover {
+    0% {
+        text-shadow: 0 0 30px rgba(247, 247, 247, 0.986);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.986);
+        transform: translateY(30px);
+    }
+    100% {
+        text-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+}
+
+span:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+span:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+span:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+span:nth-child(5) {
+    animation-delay: 1.8s;
+}
+
+span:nth-child(6) {
+    animation-delay: 2.1s;
+}
+
+span:nth-child(7) {
+    animation-delay: 2.4s;
+}
