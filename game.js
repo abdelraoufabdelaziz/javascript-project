@@ -6,9 +6,48 @@ canvas.height = 600;
 
 let gameFrame = 0;
 
+const enemyImage = new Image();
+enemyImage.src ='shark.png'
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
+
+
+class Enemy {
+    constructor(){
+        this.x = canvas.width +200;
+        this.y = Math.random() * (canvas.height -90)
+        this.radius = 100;
+        this.speed = Math.random() * 2 + 2;
+        this.frame=0;
+        //this.framex=0;
+        
+
+    }
+    draw(){
+        // ctx.fillstyle = 'red'
+        // ctx.beginPath();
+        // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*2)
+        // ctx.fill();
+        ctx.drawImage(enemyImage,this.x-100,this.y-130,this.radius*3,this.radius*2.5); //put shark image
+
+    }
+    update(){
+        this.x -= this.speed;
+        if(this.x < 0 - this.radius * 2){
+            this.x=canvas.width +200;
+            this.y = Math.random()*(canvas.height-150)+90;
+            this.speed =Math.random()*2+2;
+        }
+    }
+}
+
+const enemy1 =new Enemy();
+function handleEnemy(){
+    enemy1.update();
+    enemy1.draw();
+}
+
 class diamond {
     constructor() {
         this.x = Math.random() * canvas.width;
@@ -119,7 +158,9 @@ function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     gameFrame++;
+   
     handlefishes();
+     handleEnemy();
     handlediamonds();
     requestAnimationFrame(animate);
 
