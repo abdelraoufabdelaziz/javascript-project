@@ -122,7 +122,7 @@ class Enemy {
     }
 }
 const img= new Image();
-img.src ="Webp.net-resizeimage.png"
+img.src ="smallbutton.png"
 function Gameover()
 {
     ctx.fillStyle ="white"
