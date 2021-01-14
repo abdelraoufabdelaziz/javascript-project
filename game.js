@@ -94,10 +94,10 @@ const bgfish1 = new bgfish();
 bgfish1.src = 'bgimg.png';
 
 
-function handlefishes() {
+function handlefishestoleft() {
     bgfish1.update();
     bgfish1.draw();
-    if (gameFrame % 100 == 0) {
+    if (gameFrame % 120 == 0) {
         bgfisharr.push(new bgfish());
 
     }
@@ -115,11 +115,33 @@ function handlefishes() {
     }
 }
 
+// function handlefishestoright() {
+//     bgfish1.update();
+//     bgfish1.draw();
+//     if (gameFrame % 120 == 0) {
+//         bgfisharr.push(new bgfish());
+
+//     }
+//     for (let i = 0; i > bgfisharr.length; i++) {
+//         bgfisharr[i].update();
+//         bgfisharr[i].draw();
+//         if (bgfisharr[i].y < 0) {
+//             bgfisharr.splice(i, 2);
+//         }
+//     }
+//     for (let i = 0; i < bgfisharr.length; i++) {
+//         if (bgfisharr[i].y< 0 - bgfisharr[i].radius * 2) {
+//             bgfisharr.splice(i, 2);
+//         }
+//     }
+// }
+
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     gameFrame++;
-    handlefishes();
+    handlefishestoleft();
+    // handlefishestoright();
     handlediamonds();
     requestAnimationFrame(animate);
 
