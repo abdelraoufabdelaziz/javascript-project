@@ -62,10 +62,10 @@ class player {
             ctx.lineTo(mouse.x , mouse.y)
             ctx.stroke();
         }
-       // ctx.beginPath();
-       // ctx.arc(this.x , this.y , this.radius , 0 , Math.PI *2)
-        //ctx.fill();
-        //ctx.closePath();
+    //    ctx.beginPath();
+    //    ctx.arc(this.x , this.y , this.radius , 0 , Math.PI *2)
+    //     ctx.fill();
+        ctx.closePath();
        ctx.save();
         ctx.translate(this.x , this.y);
         ctx.rotate(this.angle)
@@ -80,7 +80,7 @@ class player {
 }
 
 const enemyImage = new Image();
-enemyImage.src ='shark.png'
+enemyImage.src ='nshark.png'
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
@@ -90,20 +90,17 @@ class Enemy {
     constructor(){
         this.x = canvas.width +200;
         this.y = Math.random() * (canvas.height -90)
-        this.radius = 100;
+        this.radius = 50;
         this.speed = Math.random() * 2 + 2;
         this.frame=0;
-        //this.framex=0;
-        
-
+       
     }
     draw(){
         // ctx.fillstyle = 'red'
         // ctx.beginPath();
         // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*2)
         // ctx.fill();
-        ctx.drawImage(enemyImage,this.x-100,this.y-130,this.radius*3,this.radius*2.5); //put shark image
-
+        ctx.drawImage(enemyImage,this.x-90,this.y-100,this.radius*7.5,this.radius*3.7); //put shark image
     }
     update(){
         this.x -= this.speed;
@@ -278,7 +275,7 @@ function animate() {
 
     gameFrame++;
     handlefishes();
-     handleEnemy();
+    handleEnemy();
     handlediamonds();
     player1.update();
     player1.draw();
