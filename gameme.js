@@ -1,10 +1,4 @@
-document.getElementById('malebtn').addEventListener("click",play);
-    
-
-function play(){
-    window.location='game.html';
-   
-    const canvas = document.getElementById('canvas1');
+const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 canvas.width = 1000;
 canvas.height = 600;
@@ -295,4 +289,3 @@ function animate() {
 }
 
 animate();
-}
