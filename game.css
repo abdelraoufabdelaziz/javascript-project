@@ -21,7 +21,9 @@ body {
     width: 1000px;
     height: 600px;
     border: none;
-    background-image: url("im.jpg");
+    /* background-image: url("im.jpg"); */
+    /* for medium level */
+    background-image: url("medbg.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
