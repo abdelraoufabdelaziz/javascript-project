@@ -26,10 +26,10 @@ canvas.addEventListener("mouseup" , function(event){
 });
 
 var personup= new Image();
-personup.src="output-onlinepngtools.png"
+personup.src="femaledown.png"
 
 var persondown = new Image();
-persondown.src="Webp.net-resizeimage.png"
+persondown.src="female.png"
 class player {
     constructor(){
         this.x=0;
