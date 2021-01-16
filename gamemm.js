@@ -79,24 +79,28 @@ class player {
     }
 }
 
-const enemyImage = new Image();
-enemyImage.src = 'shark.png'
+
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
 
 
+const enemyImage = new Image();
+enemyImage.src = 'nshark.png'
 class Enemy {
     constructor() {
-        this.x = canvas.width + 200;
-        this.y = Math.random() * (canvas.height - 90)
-        this.radius = 100;
-        this.speed = Math.random() * 2 + 2;
-        this.frame = 0;
+        this.x = canvas.width +300;
+        this.y = Math.random() * (canvas.height -90)
+        this.radius = 50;
+        this.speed = Math.random() * 10 + 2;
+        this.frame=0;
     }
     draw() {
-        ctx.drawImage(enemyImage, this.x - 100, this.y - 130, this.radius * 3, this.radius * 2.5); //put shark image
-
+        // ctx.fillstyle = 'red'
+        // ctx.beginPath();
+        // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*3)
+        // ctx.fill();
+        ctx.drawImage(enemyImage,this.x-90,this.y-100,this.radius*7.5,this.radius*3.7); //put shark image
     }
     update() {
         this.x -= this.speed;
@@ -114,6 +118,46 @@ class Enemy {
         }
     }
 }
+
+const lenemyImage = new Image();
+lenemyImage.src ='lshark.png'
+class LEnemy {
+    constructor(){
+        this.x = canvas.width -1200;
+        this.y = Math.random() * (canvas.height -90)
+        while (this.y==(canvas.height/2)+90 || this.y==(canvas.height/2)-90 ){
+            this.y = Math.random()*(canvas.height-150)+90;
+        }
+        this.radius = 50;
+        this.speed = Math.random() * 2 + 2;
+        this.frame=0;
+
+    }
+    draw(){
+        // ctx.fillstyle = 'red'
+        // ctx.beginPath();
+        // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*3)
+        // ctx.fill();
+        ctx.drawImage(lenemyImage,this.x-300,this.y-100,this.radius*7.5,this.radius*3.7); //put shark image
+    }
+    update(){
+        this.x += this.speed;
+        if(this.x > 800 + this.radius * 6){
+            this.x=canvas.width -900;
+            this.y = Math.random()*(canvas.height-150)+90;
+            this.speed =Math.random()*10+2;
+        }
+        
+        //collision with player
+        const dx = this.x - player1.x;
+        const dy = this.y - player1.y;
+        const distance = Math.sqrt(dx * dx + dy * dy)
+        if (distance < this.radius + player1.radius) {
+            Gameover();
+        }
+    }
+}
+
 const img = new Image();
 img.src = "smallbutton.png"
 
@@ -131,6 +175,12 @@ const enemy1 = new Enemy();
 function handleEnemy() {
     enemy1.update();
     enemy1.draw();
+}
+
+const enemy2 =new LEnemy();
+function handleLEnemy(){
+    enemy2.update();
+    enemy2.draw();
 }
 
 class diamond {
@@ -268,6 +318,7 @@ function animate() {
     // hansdlefishestoleft();
     handlefishestoleftm();
     handleEnemy();
+    handleLEnemy();
     handlediamonds();
     player1.update();
     player1.draw();
