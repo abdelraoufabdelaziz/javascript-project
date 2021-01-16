@@ -7,7 +7,6 @@ ctx.font="50px Georgia"
 let gameFrame = 0;
 let gameover=false;
 
-
 //Mouse setting
 let canvasposition = canvas.getBoundingClientRect();
 const mouse ={
@@ -25,11 +24,14 @@ canvas.addEventListener("mouseup" , function(event){
    
 });
 
+//playersetting
+
 var personup= new Image();
-personup.src="femaledown.png"
+personup.src="Webp.net-resizeimage.png"
 
 var persondown = new Image();
-persondown.src="female.png"
+persondown.src="output-onlinepngtools.png"
+
 class player {
     constructor(){
         this.x=0;
@@ -62,18 +64,18 @@ class player {
             ctx.lineTo(mouse.x , mouse.y)
             ctx.stroke();
         }
-       // ctx.beginPath();
-        //ctx.arc(this.x , this.y , this.radius , 0 , Math.PI *2)
-        //ctx.fill();
-        //ctx.closePath();
+        ctx.beginPath();
+        ctx.arc(this.x , this.y , this.radius , 0 , Math.PI *2)
+        ctx.fill();
+        ctx.closePath();
        ctx.save();
         ctx.translate(this.x , this.y);
         ctx.rotate(this.angle)
         if (this.x >= mouse.x){
-            ctx.drawImage(personup , 0 - 150 , 0 - 130 )
+            ctx.drawImage(personup , 0 - 80 , 0 - 90 )
         }else{
              
-           ctx.drawImage(persondown , 0 - 150 , 0 - 130 )
+           ctx.drawImage(persondown , 0 - 80 , 0 - 90 )
         }
         ctx.restore();
     }
@@ -84,7 +86,6 @@ enemyImage.src ='shark.png'
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
-
 
 class Enemy {
     constructor(){
@@ -98,10 +99,10 @@ class Enemy {
 
     }
     draw(){
-        // ctx.fillstyle = 'red'
-        // ctx.beginPath();
-        // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*2)
-        // ctx.fill();
+         ctx.fillstyle = 'red'
+         ctx.beginPath();
+         ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*2)
+         ctx.fill();
         ctx.drawImage(enemyImage,this.x-100,this.y-130,this.radius*3,this.radius*2.5); //put shark image
 
     }
@@ -121,6 +122,7 @@ class Enemy {
        }
     }
 }
+
 const img= new Image();
 img.src ="smallbutton.png"
 function Gameover()
@@ -215,21 +217,20 @@ class bgfish {
         this.frameY = 0;
         this.spriteWidth = 418;
         this.spriteHeight = 397;
-    }
-    draw() {
-        // ctx.fillStyle = 'red';
-        // ctx.beginPath();
-        // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        // ctx.fill();
+    }draw() {
+         ctx.fillStyle = 'red';
+         ctx.beginPath();
+         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+         ctx.fill();
         ctx.drawImage(bgimg, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
     }
     update() {
         this.x -= this.speed;
-        // if (this.x < 0 - this.radius * 2) {
-        //     this.x = canvas.width + 1000;
-        //     this.y = Math.random() * (canvas.height - 100) + 400;
-        //     this.speed = Math.random() * 2 + 2;
-        // }
+         if (this.x < 0 - this.radius * 2) {
+             this.x = canvas.width + 1000;
+             this.y = Math.random() * (canvas.height - 100) + 400;
+             this.speed = Math.random() * 2 + 2;
+         }
         if (gameFrame % 5 == 0) {
             this.frame++;
             if (this.frame >= 12) this.frame = 0;
@@ -263,14 +264,13 @@ function handlefishes() {
             bgfisharr.splice(i, 2);
         }
     }
-    for (let i = 0; i < bgfisharr.length; i++) {
-        if (bgfisharr[i].y < 0 - bgfisharr[i].radius * 2) {
-            bgfisharr.splice(i, 2);
-        }
+
+}
+for (let i = 0; i < bgfisharr.length; i++) {
+    if (bgfisharr[i].y < 0 - bgfisharr[i].radius * 2) {
+        bgfisharr.splice(i, 2);
     }
 }
-
-
 const player1 = new player();
 
 function animate() {

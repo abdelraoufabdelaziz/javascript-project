@@ -1,5 +1,5 @@
 body{
-    background-image:url("WhatsApp Image 2021-01-05 at 12.08.50 PM.jpeg");
+    background-image:url("4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -18,21 +18,21 @@ body{
     height: 200;
 }
 #easy-span {
-    margin-top: 100;
+    margin-top: 50;
     margin-left: -440;
     display: inline-block;
 position:fixed;
 
 }
 #med-span {
-    margin-top:  70;
+    margin-top:  20;
     margin-left: -100;
     display: inline-block;
 position:fixed;
 
 }
 #hard-span {
-    margin-top: 30;
+    margin-top: -20;
     margin-left: 250;
     display: inline-block;
 position:fixed;
