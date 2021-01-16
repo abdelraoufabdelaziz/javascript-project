@@ -25,19 +25,13 @@ canvas.addEventListener("mouseup", function(event) {
 
 });
 
-<<<<<<< HEAD
-var personup = new Image();
-personup.src = "male.png"
 
-var persondown = new Image();
-persondown.src = "maledown.png"
-=======
 var personup= new Image();
 personup.src="femaledown.png"
 
 var persondown = new Image();
 persondown.src="female.png"
->>>>>>> 9f37110837a8f902b96e8d4a225c5b9108bda033
+
 class player {
     constructor() {
         this.x = 0;
