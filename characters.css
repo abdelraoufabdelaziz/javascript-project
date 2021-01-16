@@ -59,17 +59,12 @@ img:hover {
 }
 button {
    display: inline-block;
-   font-size: 30px;
+   padding:10;
    margin-top: 545px;
-   margin-left: 340px;
-   background-color:darkturquoise;
-   color:orange;
-   border-radius: 50px;
-   padding: 10px;
-   border-color:orange;
-   border-width: 10px;
-}
-button:hover{
-   background-color: blue;
-   border-color:indianred;
+   margin-left: 350px;
+    border-radius: 50px;
+    background-color: royalblue;
+    font-size: xx-large;
+    font-family: cursive;
+    color: seashell;
 }

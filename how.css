@@ -1,0 +1,134 @@
+/* this div for body of menu with background */
+
+body {
+    background-image: url("4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.move_letters {
+    font-size: 27px;
+    font-family: cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+span {
+    color: #284c68;
+    display: inline-block;
+    font-weight: bolder;
+    animation: mover 6s linear infinite;
+    text-align: center;
+}
+
+@keyframes mover {
+    0% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.30);
+        transform: translateY(30px)
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    }
+}
+
+#back_img {
+    position: absolute;
+    top: 83%;
+    left: 15%;
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border: none;
+}
+
+#back_img:active {
+    box-shadow: 0 5px;
+    transform: translateY(4px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-box {
+    font-size: 50px;
+    font-family: cursive;
+    position: absolute;
+    top: 20PX;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    font-weight: bolder;
+    text-align: center;
+    animation: mover 3s linear infinite;
+    color: rgba(4, 130, 168, 0.986);
+}
+
+@keyframes mover {
+    0% {
+        text-shadow: 0 0 30px rgba(247, 247, 247, 0.986);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.986);
+        transform: translateY(30px);
+    }
+    100% {
+        text-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+}
+
+span:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+span:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+span:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+span:nth-child(5) {
+    animation-delay: 1.8s;
+}
+
+span:nth-child(6) {
+    animation-delay: 2.1s;
+}
+
+span:nth-child(7) {
+    animation-delay: 2.4s;
+}
+
+span:nth-child(8) {
+    animation-delay: 2.7s;
+}
+
+span:nth-child(9) {
+    animation-delay: 3s;
+}
+
+span:nth-child(10) {
+    animation-delay: 2.7s;
+}
+
+span:nth-child(11) {
+    animation-delay: 3s;
+}
