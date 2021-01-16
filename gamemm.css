@@ -8,11 +8,6 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* margin-left: 100px; */
-    /* background-size: cover; */
-    /* */
-    /* margin-top: 50px; */
-    /* border-image-width: 1000px; */
     justify-content: center;
     align-items: center;
 }
@@ -21,8 +16,6 @@ body {
     width: 1000px;
     height: 600px;
     border: none;
-    /* background-image: url("im.jpg"); */
-    /* for medium level */
     background-image: url("medbg.jpeg");
     background-repeat: no-repeat;
     background-position: center;
