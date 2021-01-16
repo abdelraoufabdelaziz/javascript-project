@@ -25,13 +25,11 @@ canvas.addEventListener("mouseup" , function(event){
    
 });
 
-var playerup= new Image();
-playerup.src="Webp.net-resizeimage.png";
+var personup= new Image();
+personup.src="femaledown.png"
 
-
-
-var playerdown= new Image();
-playerdown.src="output-onlinepngtools.png"; 
+var persondown = new Image();
+persondown.src="female.png"
 class player {
     constructor(){
         this.x=0;
@@ -65,17 +63,17 @@ class player {
             ctx.stroke();
         }
        // ctx.beginPath();
-       // ctx.arc(this.x , this.y , this.radius , 0 , Math.PI *2)
+        //ctx.arc(this.x , this.y , this.radius , 0 , Math.PI *2)
         //ctx.fill();
         //ctx.closePath();
        ctx.save();
         ctx.translate(this.x , this.y);
-        ctx.rotate(this.angle-180)
+        ctx.rotate(this.angle)
         if (this.x >= mouse.x){
-            ctx.drawImage(personup , 0 - 80 , 0 - 90 )
+            ctx.drawImage(personup , 0 - 150 , 0 - 130 )
         }else{
              
-           ctx.drawImage(persondown , 0 - 80 , 0 - 90 )
+           ctx.drawImage(persondown , 0 - 150 , 0 - 130 )
         }
         ctx.restore();
     }
