@@ -82,7 +82,7 @@ class player {
 }
 
 const enemyImage = new Image();
-enemyImage.src = 'shark.png'
+enemyImage.src = 'nshark.png'
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
