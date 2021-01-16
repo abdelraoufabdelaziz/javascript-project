@@ -4,6 +4,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    margin-top: -200;
 }
 #easy {
     
@@ -111,3 +112,18 @@ h1{
 }
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.4); }
+
+#back_img{
+    position:fixed;
+    top:84%;
+    left:19%;
+    width:100px;
+    height:100px;
+    outline: none;
+    border: none;
+
+}
+#back_img:active {
+    box-shadow: 0 5px ;
+    transform: translateY(4px);
+}
