@@ -68,3 +68,19 @@ button {
     font-family: cursive;
     color: seashell;
 }
+
+
+#back_img{
+   position:absolute;
+   top:85%;
+   left:19%;
+   width:100px;
+   height:100px;
+   outline: none;
+   border: none;
+
+}
+#back_img:active {
+   box-shadow: 0 5px ;
+   transform: translateY(4px);
+}
