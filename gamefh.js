@@ -25,19 +25,13 @@ canvas.addEventListener("mouseup", function(event) {
 
 });
 
-<<<<<<< HEAD
-var personup = new Image();
-personup.src = "male.png"
 
-var persondown = new Image();
-persondown.src = "maledown.png"
-=======
 var personup= new Image();
 personup.src="femaledown.png"
 
 var persondown = new Image();
 persondown.src="female.png"
->>>>>>> 9f37110837a8f902b96e8d4a225c5b9108bda033
+
 class player {
     constructor() {
         this.x = 0;
@@ -77,18 +71,18 @@ class player {
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(this.angle)
-        if (this.x >= mouse.x) {
-            ctx.drawImage(personup, 0 - 80, 0 - 90)
-        } else {
-
-            ctx.drawImage(persondown, 0 - 80, 0 - 90)
+        if (this.x >= mouse.x){
+            ctx.drawImage(personup , 0 - 150 , 0 - 130 )
+        }else{
+             
+           ctx.drawImage(persondown , 0 - 150 , 0 - 130 )
         }
         ctx.restore();
     }
 }
 
 const enemyImage = new Image();
-enemyImage.src = 'shark.png'
+enemyImage.src = 'nshark.png'
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
