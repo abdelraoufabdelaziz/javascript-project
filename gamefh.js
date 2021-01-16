@@ -71,11 +71,11 @@ class player {
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(this.angle)
-        if (this.x >= mouse.x) {
-            ctx.drawImage(personup, 0 - 80, 0 - 90)
-        } else {
-
-            ctx.drawImage(persondown, 0 - 80, 0 - 90)
+        if (this.x >= mouse.x){
+            ctx.drawImage(personup , 0 - 150 , 0 - 130 )
+        }else{
+             
+           ctx.drawImage(persondown , 0 - 150 , 0 - 130 )
         }
         ctx.restore();
     }
