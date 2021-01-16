@@ -203,7 +203,7 @@ function handlediamonds() {
 }
 const bgfisharr = [];
 const bgimg = new Image();
-bgimg.src = 'bgimg.png';
+bgimg.src = 'hardf1.png';
 class bgfish {
     constructor() {
         this.x = canvas.width + 200;
@@ -213,8 +213,8 @@ class bgfish {
         this.frame = 0;
         this.frameX = 0;
         this.frameY = 0;
-        this.spriteWidth = 418;
-        this.spriteHeight = 397;
+        this.spriteWidth = 497;
+        this.spriteHeight = 324;
     }
     draw() {
 
@@ -239,7 +239,7 @@ class bgfish {
     }
 }
 const bgfish1 = new bgfish();
-bgfish1.src = 'bgimg.png';
+bgfish1.src = 'hardf1.png';
 
 
 function handlefishestoleft() {
@@ -262,15 +262,14 @@ function handlefishestoleft() {
         }
     }
 }
-///////////////////////////////////////
-//for medium level
-const medbg = new Image();
-medbg.src = 'medium.png';
-class medfish {
+
+const hard = new Image();
+hard.src = 'hardf.png';
+class hardfish {
     constructor() {
-        this.x = canvas.width + 100;
-        this.y = Math.random() * (canvas.height) + 90;
-        this.radius = 50;
+        this.x = canvas.width + 200;
+        this.y = Math.random() * (canvas.height) + 120;
+        this.radius = 90;
         this.speed = Math.random() * 1 + 2;
         this.frame = 0;
         this.frameX = 0;
@@ -280,7 +279,7 @@ class medfish {
     }
     draw() {
 
-        ctx.drawImage(medbg, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
+        ctx.drawImage(hard, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
     }
     update() {
         this.x -= this.speed;
@@ -300,15 +299,15 @@ class medfish {
         }
     }
 }
-const medbg1 = new medfish();
-medbg1.src = 'medium.png';
+const hard1 = new hardfish();
+hard1.src = 'hardf.png';
 
 
 function handlefishestoleftm() {
-    medbg1.update();
-    medbg1.draw();
+    hard1.update();
+    hard1.draw();
     if (gameFrame % 50 == 0) {
-        bgfisharr.push(new medfish());
+        bgfisharr.push(new hardfish());
 
     }
     for (let i = 0; i < bgfisharr.length; i++) {
@@ -324,7 +323,67 @@ function handlefishestoleftm() {
         }
     }
 }
+// const bgfisharr = [];
+const bgimg1 = new Image();
+bgimg1.src = 'hardf2.png';
+class bgfish2 {
+    constructor() {
+        this.x = canvas.width + 200;
+        this.y = Math.random() * (canvas.height - 150) + 90;
+        this.radius = 70;
+        this.speed = Math.random() * 2 + 1;
+        this.frame = 0;
+        this.frameX = 0;
+        this.frameY = 0;
+        this.spriteWidth = 418;
+        this.spriteHeight = 397;
+    }
+    draw() {
 
+        ctx.drawImage(bgimg1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
+    }
+    update() {
+        this.x -= this.speed;
+
+        if (gameFrame % 5 == 0) {
+            this.frame++;
+            if (this.frame >= 12) this.frame = 0;
+            if (this.frame == 3 || this.frame == 7 || this.frame == 11)
+                this.frameX = 0;
+            else {
+                this.frameX++;
+            }
+            if (this.frame < 3) this.frameY = 0;
+            else if (this.frame < 7) this.frameY = 1;
+            else if (this.frame < 11) this.frameY = 2;
+            else this.frameY = 0;
+        }
+    }
+}
+const bgfishd = new bgfish2();
+bgfishd.src = 'hardf2.png';
+
+
+function handlefishestolefth() {
+    bgfish1.update();
+    bgfish1.draw();
+    if (gameFrame % 120 == 0) {
+        bgfisharr.push(new bgfish2());
+
+    }
+    for (let i = 0; i < bgfisharr.length; i++) {
+        bgfisharr[i].update();
+        bgfisharr[i].draw();
+        if (bgfisharr[i].y < 0) {
+            bgfisharr.splice(i, 2);
+        }
+    }
+    for (let i = 0; i < bgfisharr.length; i++) {
+        if (bgfisharr[i].y < 0 - bgfisharr[i].radius * 2) {
+            bgfisharr.splice(i, 2);
+        }
+    }
+}
 
 const player1 = new player();
 
@@ -333,6 +392,7 @@ function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     gameFrame++;
     handlefishestoleft();
+    handlefishestolefth();
     handlefishestoleftm();
     handleEnemy();
     handlediamonds();
