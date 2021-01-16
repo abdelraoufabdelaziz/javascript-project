@@ -264,66 +264,66 @@ function handlefishestoleft() {
 }
 ///////////////////////////////////////
 //for medium level
-const medbg = new Image();
-medbg.src = 'medium.png';
-class medfish {
-    constructor() {
-        this.x = canvas.width + 100;
-        this.y = Math.random() * (canvas.height) + 90;
-        this.radius = 50;
-        this.speed = Math.random() * 1 + 2;
-        this.frame = 0;
-        this.frameX = 0;
-        this.frameY = 0;
-        this.spriteWidth = 497;
-        this.spriteHeight = 324;
-    }
-    draw() {
+// const medbg = new Image();
+// medbg.src = 'medium.png';
+// class medfish {
+//     constructor() {
+//         this.x = canvas.width + 100;
+//         this.y = Math.random() * (canvas.height) + 90;
+//         this.radius = 50;
+//         this.speed = Math.random() * 1 + 2;
+//         this.frame = 0;
+//         this.frameX = 0;
+//         this.frameY = 0;
+//         this.spriteWidth = 497;
+//         this.spriteHeight = 324;
+//     }
+//     draw() {
 
-        ctx.drawImage(medbg, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
-    }
-    update() {
-        this.x -= this.speed;
+//         ctx.drawImage(medbg, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
+//     }
+//     update() {
+//         this.x -= this.speed;
 
-        if (gameFrame % 5 == 0) {
-            this.frame++;
-            if (this.frame >= 12) this.frame = 0;
-            if (this.frame == 3 || this.frame == 7 || this.frame == 11)
-                this.frameX = 0;
-            else {
-                this.frameX++;
-            }
-            if (this.frame < 3) this.frameY = 0;
-            else if (this.frame < 7) this.frameY = 2;
-            else if (this.frame < 11) this.frameY = 1;
-            else this.frameY = 0;
-        }
-    }
-}
-const medbg1 = new medfish();
-medbg1.src = 'medium.png';
+//         if (gameFrame % 5 == 0) {
+//             this.frame++;
+//             if (this.frame >= 12) this.frame = 0;
+//             if (this.frame == 3 || this.frame == 7 || this.frame == 11)
+//                 this.frameX = 0;
+//             else {
+//                 this.frameX++;
+//             }
+//             if (this.frame < 3) this.frameY = 0;
+//             else if (this.frame < 7) this.frameY = 2;
+//             else if (this.frame < 11) this.frameY = 1;
+//             else this.frameY = 0;
+//         }
+//     }
+// }
+// const medbg1 = new medfish();
+// medbg1.src = 'medium.png';
 
 
-function handlefishestoleftm() {
-    medbg1.update();
-    medbg1.draw();
-    if (gameFrame % 50 == 0) {
-        bgfisharr.push(new medfish());
+// function handlefishestoleftm() {
+//     medbg1.update();
+//     medbg1.draw();
+//     if (gameFrame % 50 == 0) {
+//         bgfisharr.push(new medfish());
 
-    }
-    for (let i = 0; i < bgfisharr.length; i++) {
-        bgfisharr[i].update();
-        bgfisharr[i].draw();
-        if (bgfisharr[i].y < 0) {
-            bgfisharr.splice(i, 3);
-        }
-    }
-    for (let i = 0; i < bgfisharr.length; i++) {
-        if (bgfisharr[i].y < 0 - bgfisharr[i].radius * 2) {
-            bgfisharr.splice(i, 3);
-        }
-    }
-}
+//     }
+//     for (let i = 0; i < bgfisharr.length; i++) {
+//         bgfisharr[i].update();
+//         bgfisharr[i].draw();
+//         if (bgfisharr[i].y < 0) {
+//             bgfisharr.splice(i, 3);
+//         }
+//     }
+//     for (let i = 0; i < bgfisharr.length; i++) {
+//         if (bgfisharr[i].y < 0 - bgfisharr[i].radius * 2) {
+//             bgfisharr.splice(i, 3);
+//         }
+//     }
+// }
 
 
 const player1 = new player();
@@ -333,7 +333,7 @@ function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     gameFrame++;
     handlefishestoleft();
-    handlefishestoleftm();
+    // handlefishestoleftm();
     handleEnemy();
     handlediamonds();
     player1.update();
