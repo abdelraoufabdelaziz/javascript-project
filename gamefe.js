@@ -79,18 +79,18 @@ class player {
     }
 }
 
-const enemyImage = new Image();
-enemyImage.src ='shark.png'
+
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
 
-
+const enemyImage = new Image();
+enemyImage.src ='nshark.png'
 class Enemy {
     constructor(){
         this.x = canvas.width +200;
         this.y = Math.random() * (canvas.height -90)
-        this.radius = 100;
+        this.radius = 50;
         this.speed = Math.random() * 2 + 2;
         this.frame=0;
         //this.framex=0;
@@ -102,7 +102,7 @@ class Enemy {
         // ctx.beginPath();
         // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*2)
         // ctx.fill();
-        ctx.drawImage(enemyImage,this.x-100,this.y-130,this.radius*3,this.radius*2.5); //put shark image
+        ctx.drawImage(enemyImage,this.x-90,this.y-100,this.radius*7.5,this.radius*3.7); //put shark image
 
     }
     update(){
