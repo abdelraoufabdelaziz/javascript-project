@@ -90,7 +90,7 @@ enemyImage.src = 'nshark.png'
 class Enemy {
     constructor() {
         this.x = canvas.width +300;
-        this.y = Math.random() * (canvas.height -90)
+        this.y = Math.random() * (canvas.height/2 -90)
         this.radius = 50;
         this.speed = Math.random() * 10 + 2;
         this.frame=0;
@@ -104,7 +104,7 @@ class Enemy {
     }
     update() {
         this.x -= this.speed;
-        if (this.x < 0 - this.radius * 2) {
+        if (this.x < 0 - this.radius * 6) {
             this.x = canvas.width + 200;
             this.y = Math.random() * (canvas.height - 150) + 90;
             this.speed = Math.random() * 2 + 2;
@@ -123,10 +123,7 @@ lenemyImage.src ='lshark.png'
 class LEnemy {
     constructor(){
         this.x = canvas.width -1200;
-        this.y = Math.random() * (canvas.height -90)
-        while (this.y==(canvas.height/2)+90 || this.y==(canvas.height/2)-90 ){
-            this.y = Math.random()*(canvas.height-150)+90;
-        }
+        this.y = canvas.height/2 -90;
         this.radius = 50;
         this.speed = Math.random() * 2 + 2;
         this.frame=0;
@@ -141,10 +138,10 @@ class LEnemy {
     }
     update(){
         this.x += this.speed;
-        if(this.x > 800 + this.radius * 6){
-            this.x=canvas.width -900;
+        if(this.x > canvas.width + this.radius * 6){
+            this.x=canvas.width -1200;
             this.y = Math.random()*(canvas.height-150)+90;
-            this.speed =Math.random()*10+2;
+            this.speed =Math.random()*2+2;
         }
         
         //collision with player
