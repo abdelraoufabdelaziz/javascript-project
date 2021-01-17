@@ -19,7 +19,7 @@ body {
 #play {
     /*to put button on the center of the photo*/
     position: absolute;
-    top: 35%;
+    top: 33%;
     left: 45%;
     /* transform: translate(-50%, -50%); */
     /* -ms-transform: translate(-50%, -50%); */
@@ -155,7 +155,7 @@ about:only-child {
     font-family: cursive;
     position: absolute;
     top: 20%;
-    left: 45%;
+    left: 47%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
