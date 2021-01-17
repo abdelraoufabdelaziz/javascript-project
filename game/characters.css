@@ -21,7 +21,7 @@ body{
    
    position: absolute;
    margin-left: 70%;
-   width: 30%;
+   width: 100px;
    height: 170px;
      animation: mov 3s linear infinite;
 }
@@ -43,6 +43,7 @@ body{
    width: 100px;
    height: 170px;
    animation: mov1 3s linear infinite;
+   padding-left: 20%;
    
 }
 
