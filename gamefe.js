@@ -6,6 +6,7 @@ canvas.height = 600;
 
 
 
+
 const enemyImage = new Image();
 enemyImage.src ='nshark.png'
 class Enemy {
@@ -34,11 +35,9 @@ class Enemy {
             this.y = Math.random()*(canvas.height-150)+90;
             this.speed =Math.random()*2+2;
        }
-      
+       
     }
 }
-const img= new Image();
-
 
 
 const enemy1 =new Enemy();
@@ -50,18 +49,10 @@ function handleEnemy(){
 
 
 
-
-
-
-
-
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-   
-     handleEnemy();
-    handlediamonds();
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    handleEnemy();
     requestAnimationFrame(animate);
-
 }
 
 animate();
