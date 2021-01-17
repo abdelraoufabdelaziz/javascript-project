@@ -11,8 +11,8 @@ body{
 
 .imags{
   
-   margin-left: 350px;
-   margin-top: 50px;
+   margin-left: 250px;
+   margin-top: 5%;
    position: absolute;
    transition: transform .2s;
   
