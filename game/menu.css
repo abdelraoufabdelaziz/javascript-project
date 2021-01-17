@@ -155,7 +155,7 @@ about:only-child {
     font-family: cursive;
     position: absolute;
     top: 20%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
