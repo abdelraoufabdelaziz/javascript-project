@@ -21,8 +21,8 @@ body{
    
    position: absolute;
    margin-left: 70%;
-   width: 200px;
-   height: 450px;
+   width: 170px;
+   height: 350px;
      animation: mov 3s linear infinite;
 }
 
@@ -40,8 +40,8 @@ body{
   
    position: absolute;
    margin-left: 454px;
-   width: 200px;
-   height: 450px;
+   width: 170px;
+   height: 350px;
    animation: mov1 3s linear infinite;
   
 }
@@ -64,7 +64,7 @@ button {
    display: inline-block;
    padding:10;
    margin-top: 454px;
-   margin-left: 30%;
+   margin-left: 40%;
     border-radius: 50px;
     background-color: royalblue;
     font-size: xx-large;
