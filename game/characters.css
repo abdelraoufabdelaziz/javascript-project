@@ -1,0 +1,86 @@
+body{
+   background-image: url("WhatsApp Image 2021-01-02 at 21.29.49.jpeg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   position: relative;
+}
+
+
+.imags{
+  
+   margin-left: 350px;
+   margin-top: 50px;
+   position: absolute;
+   transition: transform .2s;
+  
+}
+.female{
+   
+   position: absolute;
+   margin-left: 400px;
+   width: 200px;
+   height: 450px;
+     animation: mov 3s linear infinite;
+}
+
+@keyframes mov {
+   50% {
+      transform: translatey(10px);
+   }
+}
+
+
+
+
+
+.male{
+  
+   position: absolute;
+   width: 200px;
+   height: 450px;
+   animation: mov1 3s linear infinite;
+   
+}
+
+@keyframes mov1 {
+   50% {
+      transform: translatey(10px);
+   }
+}
+
+
+
+img:hover {
+   -ms-transform:scale(1.5);
+   -webkit-transform:scale(1.5);
+   transform:scale(1.2); 
+   
+}
+button {
+   display: inline-block;
+   padding:10;
+   margin-top: 545px;
+   margin-left: 350px;
+    border-radius: 50px;
+    background-color: royalblue;
+    font-size: xx-large;
+    font-family: cursive;
+    color: seashell;
+}
+
+
+#back_img{
+   position:absolute;
+   top:85%;
+   left:19%;
+   width:100px;
+   height:100px;
+   outline: none;
+   border: none;
+
+}
+#back_img:active {
+   box-shadow: 0 5px ;
+   transform: translateY(4px);
+}

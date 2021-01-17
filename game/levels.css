@@ -1,0 +1,129 @@
+body{
+    background-image:url("4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: -200;
+}
+#easy {
+    
+    height: 130;
+}
+#medium {
+    
+    height: 160;
+}
+#hard {
+    
+    height: 200;
+}
+#easy-span {
+    margin-top: 50;
+    margin-left: -440;
+    display: inline-block;
+position:fixed;
+
+}
+#med-span {
+    margin-top:  20;
+    margin-left: -100;
+    display: inline-block;
+position:fixed;
+
+}
+#hard-span {
+    margin-top: -20;
+    margin-left: 250;
+    display: inline-block;
+position:fixed;
+
+}
+/* #easy:hover{
+height: 175;
+
+} */
+/* #medium:hover{
+    height :190
+    
+    } */
+    /* #hard:hover{
+        height :200
+        
+        } */
+#peasy{
+    font-size:xx-large;
+    font-family:cursive;
+    color: rgb(0, 29, 156);
+    }
+    #pmedium{
+        font-size:xx-large;
+        font-family:cursive;
+        color: rgb(0, 29, 156);
+        }
+#phard{
+            font-size:xx-large;
+            font-family:cursive;
+            color:rgb(0, 29, 156);
+            }
+#bmedium{
+    margin-top: 30;
+    margin-left: -50;
+    display: block;
+    padding:10;
+    border-radius: 50px;
+    background-color: royalblue;
+    font-size: xx-large;
+    font-family: cursive;
+    color: seashell;
+    
+}
+
+#beasy{
+    margin-top: 30;
+    display: block;
+    padding:10;
+    border-radius: 50px;
+    background-color: royalblue;
+    font-size: xx-large;
+    font-family: cursive;
+    color: seashell;
+    padding-left: 40;
+    padding-right: 40;
+}
+#bhard{
+    margin-top: 30;
+    display: block;
+    padding:10;
+    border-radius: 50px;
+    background-color: royalblue;
+    font-size: xx-large;
+    font-family: cursive;
+    color: seashell;
+    padding-left: 40;
+    padding-right: 40;
+}
+h1{
+
+    margin-top: 300;
+    font-size: 60;
+    font-family: cursive;
+    color: slateblue;
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.4); }
+
+#back_img{
+    position:fixed;
+    top:84%;
+    left:19%;
+    width:100px;
+    height:100px;
+    outline: none;
+    border: none;
+
+}
+#back_img:active {
+    box-shadow: 0 5px ;
+    transform: translateY(4px);
+}
