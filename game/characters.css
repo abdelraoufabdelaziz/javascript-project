@@ -20,7 +20,7 @@ body{
 .female{
    
    position: absolute;
-   margin-left: 70%;
+   margin-left: 400px;
    width: 170px;
    height: 350px;
      animation: mov 3s linear infinite;
@@ -39,7 +39,7 @@ body{
 .male{
   
    position: absolute;
-   margin-left: 454px;
+   margin-left: 204px;
    width: 170px;
    height: 350px;
    animation: mov1 3s linear infinite;
