@@ -21,8 +21,8 @@ body{
    
    position: absolute;
    margin-left: 70%;
-   width: 40%;
-   height: 10%;
+   width: 100px;
+   height: 170px;
      animation: mov 3s linear infinite;
 }
 
@@ -39,8 +39,9 @@ body{
 .male{
   
    position: absolute;
-   width: 200px;
-   height: 450px;
+   margin-left: 40%;
+   width: 100px;
+   height: 170px;
    animation: mov1 3s linear infinite;
    
 }
