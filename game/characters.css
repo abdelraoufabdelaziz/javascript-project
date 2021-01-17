@@ -21,7 +21,7 @@ body{
    
    position: absolute;
    margin-left: 70%;
-   width: 100px;
+   width: 30%;
    height: 170px;
      animation: mov 3s linear infinite;
 }
