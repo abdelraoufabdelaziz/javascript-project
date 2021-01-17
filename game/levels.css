@@ -4,7 +4,12 @@ body{
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    margin-top: -200;
+    background-size: 80% 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     margin-top: -200; */
+    
 }
 #easy {
     
