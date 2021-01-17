@@ -20,9 +20,9 @@ body{
 .female{
    
    position: absolute;
-   margin-left: 50%;
-   width: 200px;
-   height: 450px;
+   margin-left: 70%;
+   width: 40%;
+   height: 10%;
      animation: mov 3s linear infinite;
 }
 
