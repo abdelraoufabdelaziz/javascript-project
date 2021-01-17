@@ -47,30 +47,25 @@ function handlediamonds() {
     }
 }
 const bgfisharr = [];
-
-///////////////////////////////////////
-//for medium level
-const medbg = new Image();
-medbg.src = 'medium.png';
-class medfish {
+const bgimg = new Image();
+bgimg.src = 'bgimg.png';
+class bgfish {
     constructor() {
-        this.x = canvas.width + 100;
-        this.y = Math.random() * (canvas.height) + 90;
-        this.radius = 50;
-        this.speed = Math.random() * 1 + 2;
+        this.x = canvas.width + 200;
+        this.y = Math.random() * (canvas.height - 150) + 90;
+        this.radius = 70;
+        this.speed = Math.random() * 2 + 2;
         this.frame = 0;
         this.frameX = 0;
         this.frameY = 0;
-        this.spriteWidth = 497;
-        this.spriteHeight = 324;
+        this.spriteWidth = 418;
+        this.spriteHeight = 397;
     }
     draw() {
-
-        ctx.drawImage(medbg, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
+        ctx.drawImage(bgimg, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 70, this.y - 60, this.spriteWidth / 3, this.spriteHeight / 4);
     }
     update() {
         this.x -= this.speed;
-
         if (gameFrame % 5 == 0) {
             this.frame++;
             if (this.frame >= 12) this.frame = 0;
@@ -80,44 +75,45 @@ class medfish {
                 this.frameX++;
             }
             if (this.frame < 3) this.frameY = 0;
-            else if (this.frame < 7) this.frameY = 2;
-            else if (this.frame < 11) this.frameY = 1;
+            else if (this.frame < 7) this.frameY = 1;
+            else if (this.frame < 11) this.frameY = 2;
             else this.frameY = 0;
         }
     }
 }
-const medbg1 = new medfish();
-medbg1.src = 'medium.png';
+const bgfish1 = new bgfish();
+bgfish1.src = 'bgimg.png';
 
 
-function handlefishestoleftm() {
-    medbg1.update();
-    medbg1.draw();
+function handlefishes() {
+    bgfish1.update();
+    bgfish1.draw();
     if (gameFrame % 100 == 0) {
-        bgfisharr.push(new medfish());
+        bgfisharr.push(new bgfish());
 
     }
     for (let i = 0; i < bgfisharr.length; i++) {
         bgfisharr[i].update();
         bgfisharr[i].draw();
         if (bgfisharr[i].y < 0) {
-            bgfisharr.splice(i, 3);
+            bgfisharr.splice(i, 2);
         }
     }
     for (let i = 0; i < bgfisharr.length; i++) {
         if (bgfisharr[i].y < 0 - bgfisharr[i].radius * 2) {
-            bgfisharr.splice(i, 3);
+            bgfisharr.splice(i, 2);
         }
     }
 }
 
-
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     gameFrame++;
-    handlefishestoleftm();
+    handlefishes();
     handlediamonds();
     requestAnimationFrame(animate);
+
 
 }
 
