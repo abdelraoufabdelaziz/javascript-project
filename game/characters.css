@@ -20,7 +20,7 @@ body{
 .female{
    
    position: absolute;
-   margin-left: 250px;
+   margin-left: 350px;
    width: 170px;
    height: 320px;
      animation: mov 3s linear infinite;
