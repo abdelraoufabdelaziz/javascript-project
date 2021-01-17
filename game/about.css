@@ -4,6 +4,8 @@ body{
     background-position: center;
     background-attachment: fixed;
     position: relative;
+     background-size: 80% 95%;
+    padding-left: 10%;
 
 
 }
