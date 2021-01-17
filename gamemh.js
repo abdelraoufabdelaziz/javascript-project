@@ -86,32 +86,34 @@ Diamond.src = 'diamond.png'
 const diamondarr = [];
 
 
+//jellyfish
+const jellyarr = [];
+const jellyImage = new Image();
+jellyImage.src ='jellyfish.png'
+
 class Enemy {
     constructor() {
-        this.x = canvas.width + 200;
-        this.y = Math.random() * (canvas.height - 90)
-        this.radius = 100;
-        this.speed = Math.random() * 2 + 2;
-        this.frame = 0;
+        this.x = Math.random()*(canvas.width - 150);
+        this.y =canvas.height +100;
+        this.radius = 50;
+        this.speed = Math.random() * 5 + 1;
+        this.frame=0;
         //this.framex=0;
 
 
     }
     draw() {
-        // ctx.fillstyle = 'red'
+        //ctx.fillstyle = 'blue'
         // ctx.beginPath();
         // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*2)
         // ctx.fill();
-        ctx.drawImage(enemyImage, this.x - 100, this.y - 130, this.radius * 3, this.radius * 2.5); //put shark image
-
+        ctx.closePath();
+        ctx.stroke();
+        ctx.drawImage(jellyImage,this.x-190,this.y-150,this.radius*7.5,this.radius*6); 
     }
     update() {
-        this.x -= this.speed;
-        if (this.x < 0 - this.radius * 2) {
-            this.x = canvas.width + 200;
-            this.y = Math.random() * (canvas.height - 150) + 90;
-            this.speed = Math.random() * 2 + 2;
-        }
+        this.y -= this.speed;
+
         //collision with player
         const dx = this.x - player1.x;
         const dy = this.y - player1.y;
@@ -133,12 +135,28 @@ function Gameover() {
 }
 
 
-const enemy1 = new Enemy();
 
 function handleEnemy() {
-    enemy1.update();
-    enemy1.draw();
+    if (gameFrame % 100 ==0) //every 50 frame push jellyfish
+    {
+        jellyarr.push(new Enemy())
+
+    }
+    for (let i=0; i< jellyarr.length;i++)
+    {
+        jellyarr[i].update();
+        jellyarr[i].draw();
+        
+        if (jellyarr[i].y< 0 - this.radius * 2) //passed top
+        {
+            jellyarr.splice(i,1) //cut element from array to no generate fish
+
+            i--;
+        }
+        
+    }
 }
+
 
 class diamond {
     constructor() {

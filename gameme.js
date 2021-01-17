@@ -79,13 +79,18 @@ class player {
     }
 }
 
+<<<<<<< HEAD
 const enemyImage = new Image();
 enemyImage.src ='nshark.png'
+=======
+
+>>>>>>> game
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
 
-
+const enemyImage = new Image();
+enemyImage.src ='nshark.png'
 class Enemy {
     constructor(){
         this.x = canvas.width +200;
@@ -101,6 +106,10 @@ class Enemy {
         // ctx.arc(this.x,this.y,this.radius, 0 , Math.PI*2)
         // ctx.fill();
         ctx.drawImage(enemyImage,this.x-90,this.y-100,this.radius*7.5,this.radius*3.7); //put shark image
+<<<<<<< HEAD
+=======
+
+>>>>>>> game
     }
     update(){
         this.x -= this.speed;
