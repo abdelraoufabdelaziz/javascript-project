@@ -9,7 +9,7 @@ body {
     background-position: center;
     position: relative;
     background-attachment: fixed;
-    /* background-size: 700px 700px; */
+    background-size: 805 95%;
     /* margin-top: 50px; */
 }
 
@@ -19,7 +19,7 @@ body {
 #play {
     /*to put button on the center of the photo*/
     position: absolute;
-    top: 250px;
+    top: 40%;
     left: 45%;
     /* transform: translate(-50%, -50%); */
     /* -ms-transform: translate(-50%, -50%); */
@@ -66,7 +66,7 @@ body {
 #htoplay {
     /*to put button on the center of the photo*/
     position: absolute;
-    top: 400px;
+    top: 60%;
     left: 42%;
     /* transform: translate(-50%, -50%); */
     /* -ms-transform: translate(-50%, -50%); */
@@ -105,7 +105,7 @@ body {
 #about {
     /*to put button on the center of the photo*/
     position: absolute;
-    top: 500px;
+    top: 75%;
     left: 42%;
     /* transform: translate(-50%, -50%); */
     /* -ms-transform: translate(-50%, -50%); */
