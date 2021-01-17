@@ -6,6 +6,10 @@ body {
     background-position: center;
     position: relative;
     background-attachment: fixed;
+    background-size: 80% 95%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .move_letters {
