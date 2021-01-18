@@ -43,13 +43,13 @@ span {
 }
 
 #back_img {
-    position: absolute;
-    top: 83%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    outline: none;
-    border: none;
+    position:absolute;
+   top:83%;
+   left:15%;
+   width:100px;
+   height:100px;
+   outline: none;
+   border: none;
 }
 
 #back_img:active {

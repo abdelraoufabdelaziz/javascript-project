@@ -1,5 +1,5 @@
 body{
-   background-image: url("WhatsApp Image 2021-01-02 at 21.29.49.jpeg");
+   background-image: url("about_bg.jpeg");
    background-repeat: no-repeat;
    background-position: center;
    background-attachment: fixed;
@@ -75,8 +75,8 @@ button {
 
 #back_img{
    position:absolute;
-   top:85%;
-   left:19%;
+   top:83%;
+   left:15%;
    width:100px;
    height:100px;
    outline: none;
