@@ -155,14 +155,11 @@ class LEnemy {
     }
 }
 
-const img = new Image();
-img.src = "smallbutton.png"
 
 function Gameover() {
     ctx.fillStyle = "white"
     ctx.fillText("Game over" + "  " + "your score is:" + "(" + score + ")", 200, 300)
 
-    ctx.drawImage(img, 0, 500)
     gameover = true;
 }
 
