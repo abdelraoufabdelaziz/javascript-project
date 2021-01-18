@@ -79,7 +79,7 @@ class player {
     }
 }
 
-
+// declaring image of diamond 
 const Diamond = new Image();
 Diamond.src = 'diamond.png'
 const diamondarr = [];
@@ -179,7 +179,7 @@ function handleLEnemy(){
     enemy2.update();
     enemy2.draw();
 }
-
+//declaration of class diamon that the player should collect
 class diamond {
     constructor() {
         this.x = Math.random() * canvas.width;
@@ -208,7 +208,7 @@ const diamondpop1 = document.createElement("audio")
 diamondpop1.src = "bubbles-single2.wav"
 const diamondpop2 = document.createElement("audio")
 diamondpop2.src = "Plop.ogg"
-
+//function to handle number of diamonds fallin from the surface
 function handlediamonds() {
     if (gameFrame % 50 == 0) {
         diamondarr.push(new diamond());
@@ -308,7 +308,7 @@ function handlefishestoleftm() {
 
 const player1 = new player();
 
-
+//animate function to draw each function
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     gameFrame++;
