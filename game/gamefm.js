@@ -314,7 +314,7 @@ function animate() {
     handlediamonds();
     player1.update();
     player1.draw();
-    ctx.fillStyle = "black"
+    ctx.fillStyle = "white"
     ctx.fillText("score: " + score, 10, 50, )
     if (!gameover) requestAnimationFrame(animate);
 
